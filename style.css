@@ -1,4 +1,30 @@
-body {
-  background-image: url(wallpapers/Clouds.bmp);
-  background-size: cover;
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.body__desktop {
+  gap: 8px;
+  width: -moz-min-content;
+  width: min-content;
+}
+.body__desktop__icon {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  width: 56px;
+  align-items: center;
+  justify-content: center;
+}
+.body__desktop__icon:focus {
+  background-color: rgba(1, 197, 197, 0.373); /*delete, handled by dom interaction now*/
+}
+.body__desktop__image {
+  width: 32px;
+  height: 32px;
+}
+.body__desktop__file-name {
+  color: white;
+  text-align: center;
+  font-size: 13px;
 }/*# sourceMappingURL=style.css.map */
