@@ -3,8 +3,19 @@
   margin: 0px;
 }
 
+.body {
+  background-image: url(wallpapers/Clouds.bmp);
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .body__desktop {
   gap: 8px;
+  display: flex;
+  flex-direction: column;
   width: -moz-min-content;
   width: min-content;
 }
@@ -109,6 +120,7 @@
   display: flex;
   justify-content: space-between;
   border-top: 1px solid rgb(227, 227, 227);
+  align-self: flex-end;
 }
 .bottom-bar__start-btn:focus {
   background-color: gray;

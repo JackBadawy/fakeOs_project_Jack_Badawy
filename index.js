@@ -1,14 +1,5 @@
 let bodyEl = document.getElementById("body");
 let desktopIconCount = 0;
-
-//body background image display properties
-bodyEl.style.backgroundImage = "url(wallpapers/Clouds.bmp)";
-bodyEl.style.backgroundSize = "cover";
-bodyEl.style.minHeight = "100vh";
-bodyEl.style.overflow = "hidden";
-bodyEl.style.display = "flex";
-bodyEl.style.flexDirection = "column";
-bodyEl.style.justifyContent = "space-between";
 let mainContainer = document.createElement("main");
 let bottomBar = document.createElement("footer");
 let startBtn = document.createElement("button");
@@ -19,8 +10,6 @@ initializeMainDesktopIconContainer();
 function initializeMainDesktopIconContainer() {
   mainContainer.id = "desktopIconContainer";
   mainContainer.className = "body__desktop";
-  mainContainer.style.display = "flex";
-  mainContainer.style.flexDirection = "column";
   bodyEl.appendChild(mainContainer);
 }
 
@@ -29,9 +18,6 @@ initializeFooterBar();
 function initializeFooterBar() {
   bottomBar.id = "footerBottomBar";
   bottomBar.className = "bottom-bar";
-  bottomBar.style.display = "flex";
-  bottomBar.style.alignSelf = "flex-end";
-
   bodyEl.appendChild(bottomBar);
 }
 
