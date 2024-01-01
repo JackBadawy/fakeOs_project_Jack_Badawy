@@ -9,22 +9,198 @@
   width: min-content;
 }
 .body__desktop__icon {
-  background-color: red;
+  background-color: rgba(0, 255, 255, 0);
+  border: none;
   display: flex;
   flex-direction: column;
   width: 56px;
   align-items: center;
   justify-content: center;
+  z-index: 20;
+  position: relative;
 }
 .body__desktop__icon:focus {
-  background-color: rgba(1, 197, 197, 0.373); /*delete, handled by dom interaction now*/
+  background-color: rgba(1, 115, 197, 0.404);
+}
+.body__desktop__icon:hover {
+  background-color: rgba(1, 115, 197, 0.24);
 }
 .body__desktop__image {
+  position: relative;
   width: 32px;
   height: 32px;
+  z-index: -1;
 }
 .body__desktop__file-name {
   color: white;
   text-align: center;
   font-size: 13px;
+  background-color: rgb(1, 60, 103);
+}
+.body__folder__icon {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border: none;
+  gap: 2px;
+  background-color: white;
+}
+.body__folder__icon:hover, .body__folder__icon:focus {
+  background-color: blue;
+  color: white;
+}
+.body__folder__image {
+  height: 16px;
+  margin-right: 4px;
+}
+
+.file-modal {
+  background-color: white;
+  min-height: 100px;
+  min-width: 100px;
+  position: absolute;
+  top: 50px;
+  left: 65px;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+}
+.file-modal__top-bar {
+  background-color: rgb(198, 198, 198);
+  min-height: 10px;
+  padding: 2px;
+  display: flex;
+}
+.file-modal__txt-area, .file-modal__txt-area:focus, .file-modal__txt-area:active {
+  min-height: 200px;
+  border: none;
+  outline: none;
+}
+.file-modal__txt-area::-webkit-resizer {
+  display: none;
+}
+.file-modal__file-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  height: 300px;
+  background-color: white;
+  margin: 5px;
+  padding: 2px;
+}
+.file-modal__exit-btn {
+  background-color: rgb(198, 198, 198);
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  margin: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.bottom-bar {
+  min-height: 24px;
+  min-width: 100%;
+  background-color: rgb(198, 198, 198);
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgb(227, 227, 227);
+}
+.bottom-bar__start-btn:focus {
+  background-color: gray;
+}
+.bottom-bar__start-btn {
+  display: flex;
+  align-items: center;
+  background-color: rgb(198, 198, 198);
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  margin: 2px;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+.bottom-bar__start-btn__txt {
+  margin: 2px;
+  font-weight: 700;
+  font-size: 12px;
+}
+.bottom-bar__start-btn__image {
+  height: 16px;
+}
+.bottom-bar__start-btn__icon:hover {
+  background-color: blue;
+  color: aliceblue;
+}
+.bottom-bar__start-btn__icon {
+  width: 180px;
+  display: flex;
+  border: none;
+  background-color: rgb(221, 221, 221);
+  align-items: center;
+}
+.bottom-bar__start-btn__icon__image {
+  height: 32px;
+  margin-right: 4px;
+  margin-left: 2px;
+}
+.bottom-bar__start-btn__modal {
+  min-height: 400px;
+  min-width: 200px;
+  background-color: rgb(221, 221, 221);
+  position: absolute;
+  bottom: 27px;
+  z-index: 100;
+  display: flex;
+}
+.bottom-bar__start-btn__modal__logo {
+  width: 32px;
+  height: 400px;
+  background-color: gray;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+}
+.bottom-bar__start-btn__modal__logo__t1 {
+  transform: rotate(-90deg);
+  margin: 34px;
+  color: rgb(221, 221, 221);
+  font-size: x-large;
+}
+.bottom-bar__start-btn__modal__logo__t2 {
+  transform: rotate(-90deg);
+  color: white;
+  font-size: x-large;
+}
+.bottom-bar__start-btn__modal__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.bottom-bar__time-box {
+  background-color: rgb(198, 198, 198);
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  margin: 2px;
+}
+.bottom-bar__time-box__txt {
+  padding-right: 2px;
+  padding-left: 3px;
+}
+
+#fileThreeModal {
+  background-color: rgb(198, 198, 198);
+  min-height: 300px;
+  min-width: 400px;
+  position: absolute;
+  top: 20vh;
+  left: 20vw;
 }/*# sourceMappingURL=style.css.map */

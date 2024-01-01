@@ -6,31 +6,231 @@
 .body {
   &__desktop {
     gap: 8px;
+
     width: min-content;
     &__icon {
-      background-color: red;
+      background-color: rgba(0, 255, 255, 0);
+      border: none;
       display: flex;
       flex-direction: column;
       width: 56px;
       align-items: center;
       justify-content: center;
+
+      z-index: 20;
+      position: relative;
     }
     &__icon:focus {
-      background-color: rgba(
-        1,
-        197,
-        197,
-        0.373
-      ); /*delete, handled by dom interaction now*/
+      background-color: rgba(1, 115, 197, 0.404);
+    }
+    &__icon:hover {
+      background-color: rgba(1, 115, 197, 0.24);
     }
     &__image {
+      position: relative;
       width: 32px;
       height: 32px;
+      z-index: -1;
     }
     &__file-name {
       color: white;
       text-align: center;
       font-size: 13px;
+      background-color: rgb(1, 60, 103);
     }
   }
+
+  &__folder {
+    &__icon {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      border: none;
+      gap: 2px;
+      background-color: white;
+    }
+
+    &__icon:hover,
+    &__icon:focus {
+      background-color: blue;
+      color: white;
+    }
+
+    &__image {
+      height: 16px;
+      margin-right: 4px;
+    }
+  }
+}
+
+.file-modal {
+  background-color: white;
+  min-height: 100px;
+  min-width: 100px;
+  position: absolute;
+  top: 50px;
+  left: 65px;
+
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+
+  &__top-bar {
+    background-color: rgb(198, 198, 198);
+    min-height: 10px;
+    padding: 2px;
+    display: flex;
+  }
+  &__txt-area,
+  &__txt-area:focus,
+  &__txt-area:active {
+    min-height: 200px;
+    border: none;
+    outline: none;
+  }
+  &__txt-area::-webkit-resizer {
+    display: none;
+  }
+
+  &__file-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    height: 300px;
+    background-color: white;
+    margin: 5px;
+    padding: 2px;
+  }
+
+  &__exit-btn {
+    background-color: rgb(198, 198, 198);
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    margin: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+
+    font-weight: 500;
+    font-size: 12px;
+  }
+}
+
+.bottom-bar {
+  min-height: 24px;
+  min-width: 100%;
+  background-color: rgb(198, 198, 198);
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgb(227, 227, 227);
+
+  &__start-btn:focus {
+    background-color: gray;
+  }
+
+  &__start-btn {
+    display: flex;
+    align-items: center;
+    background-color: rgb(198, 198, 198);
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    margin: 2px;
+    min-width: max-content;
+
+    &__txt {
+      margin: 2px;
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    &__image {
+      height: 16px;
+    }
+
+    &__icon:hover {
+      background-color: blue;
+      color: aliceblue;
+    }
+
+    &__icon {
+      width: 180px;
+      display: flex;
+      border: none;
+      background-color: rgb(221, 221, 221);
+      align-items: center;
+
+      &__image {
+        height: 32px;
+        margin-right: 4px;
+        margin-left: 2px;
+      }
+    }
+
+    &__modal {
+      min-height: 400px;
+      min-width: 200px;
+      background-color: rgb(221, 221, 221);
+      position: absolute;
+      bottom: 27px;
+      z-index: 100;
+      display: flex;
+
+      &__logo {
+        width: 32px;
+        height: 400px;
+        background-color: gray;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+
+        &__t1 {
+          transform: rotate(-90deg);
+          margin: 34px;
+          color: rgb(221, 221, 221);
+          font-size: x-large;
+        }
+        &__t2 {
+          transform: rotate(-90deg);
+          color: white;
+          font-size: x-large;
+        }
+      }
+      &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+    }
+  }
+
+  &__time-box {
+    background-color: rgb(198, 198, 198);
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    margin: 2px;
+
+    &__txt {
+      padding-right: 2px;
+      padding-left: 3px;
+    }
+  }
+}
+
+#time {
+}
+
+#fileThreeModal {
+  background-color: rgb(198, 198, 198);
+  min-height: 300px;
+  min-width: 400px;
+  position: absolute;
+  top: 20vh;
+  left: 20vw;
 }
